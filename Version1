@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class CalculatorScript {
+  public static void main(String[] args) {
+    // Scanner for user input
+
+    Scanner scan = new Scanner(System.in);
+    System.out.println("Convert Feet to meters (1) or Meters to Feet (2)?");
+    int choice = scan.nextInt();
+
+    if (choice == 1) {
+      // Convert feet to meters
+
+      System.out.println("You chose to convert feet to meters.");
+      System.out.println("Enter a number for feet: ");
+      double feet1 = scan.nextDouble();
+      double meters1 = feet1 * 0.305;
+      System.out.print(feet1 + " feet is " + meters1 + " meters");
+      
+
+    } else if (choice == 2) {
+      // Convert meters to feet
+
+      System.out.println("You chose to convert meters into feet.");
+      System.out.println("Enter a number for meters: ");
+      double meters2 = scan.nextDouble();
+      double feet2 = meters2 * 3.279;
+      System.out.print(meters2 + " meters is " + feet2 + " feet");
+      
+    } else {
+      // Invalid choice
+      System.out.println("Invalid choice");
+    }
+
+    
+  }
+}
