@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+public class Main {
+
+  public static void main(String[]args){
+    // Declare variables for feet and meters
+    double feet;
+    double meters;
+
+    // Create a Scanner object to read user input
+    Scanner scanner = new Scanner(System.in);
+
+    // Prompt the user to choose which unit to convert
+    System.out.print("Which would you like to convert: '1' for feet or '2' for meters?");
+    int choice = scanner.nextInt();
+
+    // If the user chooses feet
+    if (choice == 1){
+
+      // Number of feet
+      System.out.print("Enter a number of feet: ");
+      feet = scanner.nextDouble();
+
+      // Convert to meters
+      meters = feet * 0.305;
+
+      // Print result
+      System.out.println(feet + " feet is " + meters + " meters");
+
+      // If the user chooses meters
+    } else if (choice == 2){
+
+      // Number of meters
+      System.out.print("Enter a number of meters: ");
+
+      // Convert to feet
+      meters = scanner.nextDouble();
+      feet = meters * 3.279;
+
+      // Print result
+      System.out.println(meters + " meters is " + feet + " feet");
+
+      // If user enters an invalid choice
+    } else {
+      System.out.println("Other options unavailable");
+    }
+  }
+}
